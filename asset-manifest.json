@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9b83d1d4.css",
+    "main.js": "/static/js/main.22971a36.js",
+    "static/media/ShopBop.png": "/static/media/ShopBop.a68a8a8de0599eb4f0d4.png",
+    "static/media/rahull.png": "/static/media/rahull.38560b54e29e2da58437.png",
+    "static/media/dp.jpg": "/static/media/dp.b84d537a012390f567ed.jpg",
+    "static/media/GearBest.png": "/static/media/GearBest.fd692ba838f1ace3df2c.png",
+    "static/media/Lumen5.png": "/static/media/Lumen5.d0bbf2c88a8e60b50394.png",
+    "static/media/Rahul_Kumar_Resume.pdf": "/static/media/Rahul_Kumar_Resume.cc120c231143c180904e.pdf",
+    "static/media/glassesimoji.png": "/static/media/glassesimoji.a08bdab12e8eb56a6874.png",
+    "static/media/Gumela Regular.otf": "/static/media/Gumela Regular.0ae83c6988a536716eb4.otf",
+    "static/media/humble.png": "/static/media/humble.c8b32b53675e68978981.png",
+    "static/media/heartemoji.png": "/static/media/heartemoji.26b1b6ed5e0e44083b28.png",
+    "static/media/wave.png": "/static/media/wave.fdfef4069ad90f610990.png",
+    "static/media/crown.png": "/static/media/crown.dbe416beae9b49b842ab.png",
+    "static/media/Vector2.png": "/static/media/Vector2.28db5bfd58081dd1df1b.png",
+    "index.html": "/index.html",
+    "main.9b83d1d4.css.map": "/static/css/main.9b83d1d4.css.map",
+    "main.22971a36.js.map": "/static/js/main.22971a36.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b83d1d4.css",
+    "static/js/main.22971a36.js"
+  ]
+}
