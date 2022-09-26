@@ -35,6 +35,13 @@
     .projects{
         /* border: 5px solid red; */
         padding: 0 1rem;
-        height: 600vh;
+        height: 480vh;
+    }
+    .projectHead{
+        height: 4%;
+    }
+    .p-mainDiv{
+        margin-top: 7rem;
+        height: 90%;
     }
 }

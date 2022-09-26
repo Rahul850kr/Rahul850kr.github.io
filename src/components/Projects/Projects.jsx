@@ -13,7 +13,7 @@ const Projects = () => {
   const darkMode = theme.state.darkMode;
   return (
     <div className="projects" id="Project">
-      <div className="p-heading">
+      <div className="p-heading projectHead ">
         <span style={darkMode?{color:"white"}:null} >My Awesome </span>
         <span>Projects</span>
         <div className="blur s-blur2" style={{background:"var(--purple)"}} ></div>

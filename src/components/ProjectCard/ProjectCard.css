@@ -79,10 +79,12 @@
 
 @media all and (max-width:480px){
     .tech>ul{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        /* flex-direction: column; */
         gap: 1.5rem;
-        justify-content: center;
+        /* justify-content: center; */
     }
     .pCard-content{
         flex-direction: column;
@@ -95,4 +97,25 @@
     .pCard-left{
         width: 100%;
     }
+    .pCard{
+        height: 140vh;
+    }
+    .pCard-right{
+        width: 100%;
+    }
+    .pCard-heading > :nth-child(2) {
+        color: var(--orange);
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      .pCard-heading{
+        /* border: 2px solid red; */
+        width: 100%;
+      }
+      
+      .pCard-heading > :nth-child(1) {
+          color: var(--black);
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
 }
