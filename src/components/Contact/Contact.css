@@ -45,6 +45,13 @@ textarea{
 @media all and (max-width:480px){
     .contact-form{
         flex-direction: column;
+        padding: 0;
+        /* display: flex; */
+        height: 80vh;
+        /* margin-top: 4rem; */
+        /* border: 5px solid red; */
+        width: 100%;
+        margin-bottom: 3rem;
     }
     .c-right .user{
         width: 15rem;
@@ -66,5 +73,13 @@ textarea{
         color: var(--orange);
         font-size: 1.5rem;
         font-weight: bold;
+    }
+
+    .cont{
+        display: flex;
+        flex-direction: column;
+        /* gap: 5rem; */
+        justify-content: center;
+        align-items: center;
     }
 }

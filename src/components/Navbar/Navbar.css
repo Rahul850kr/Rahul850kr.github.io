@@ -85,6 +85,8 @@
     display: none;
 }
 
+
+
 @media all and (max-width:480px){
     .n-list{
         display: none;

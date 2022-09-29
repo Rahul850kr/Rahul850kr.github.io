@@ -19,7 +19,15 @@ const Navbar1 = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <div style={darkMode?{background:"linear-gradient(to top right,black,rgb(67, 5, 67))"}:{background:"white"}} className="n-wrapper" id="Navbar">
+    <div
+      style={
+        darkMode
+          ? { background: "linear-gradient(to top right,black,rgb(67, 5, 67))" }
+          : { background: "white" }
+      }
+      className="n-wrapper"
+      id="Navbar"
+    >
       <div className="n-left">
         <div className="n-name">Rahul</div>
         <span>
@@ -60,7 +68,32 @@ const Navbar1 = () => {
             onClick={handleShow}
             className="fa-solid fa-bars"
           ></i>
-          <Offcanvas show={show} onHide={handleClose}>
+
+          {/* ---------------------------------------------------------------------------------------- */}
+
+          {/* <Offcanvas show={show} onHide={handleClose} {...props}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          Some text as placeholder. In real life you can have the elements you
+          have chosen. Like, text, images, lists, etc.
+        </Offcanvas.Body>
+      </Offcanvas> */}
+
+          {/* --------------------------------------------------------------------------------- */}
+
+          <Offcanvas
+            style={{
+              background: darkMode
+                ? "linear-gradient(to top right,black,rgb(67, 5, 67))"
+                : "",
+              color: darkMode ? "white" : "",
+            }}
+            className="sidebarMain"
+            show={show}
+            onHide={handleClose}
+          >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title>
                 <img
@@ -102,7 +135,7 @@ const Navbar1 = () => {
                 <Link spy={true} to="Contact" smooth={true}>
                   <p>Contact</p>
                 </Link>
-                <p style={{fontSize:"12px"}} >rahul850kr@gmail.com</p>
+                <p style={{ fontSize: "12px" }}>rahul850kr@gmail.com</p>
               </div>
             </Offcanvas.Body>
           </Offcanvas>

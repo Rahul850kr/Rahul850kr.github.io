@@ -13,10 +13,10 @@ const Footer = () => {
         <span>+91 8102505329</span>
         <div className="f-icons">
           <a href="https://github.com/Rahul850kr" target="_blank">
-            <Github color="white" size="3rem" />
+            <Github className="git" color="white" size="3rem" />
           </a>
           <a href="https://www.linkedin.com/in/rahul-kumar-a76323230/" target="_blank">
-            <Linkedin color="white" size="3rem" />
+            <Linkedin className="git" color="white" size="3rem" />
           </a>
         </div>
       </div>
