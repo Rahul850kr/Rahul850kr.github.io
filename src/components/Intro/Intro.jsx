@@ -6,7 +6,7 @@ import LinkedIn from "../../img/linkedin.png";
 import Vector1 from "../../img/Vector1.png";
 import Vector2 from "../../img/Vector2.png";
 import Rahul from "../../img/rahull.png";
-import Rahul2 from "./dp.jpg";
+import Rahul2 from "../../img/rah.jpeg";
 
 // import Thumbup from "../../img/thumbup.png";
 import Crown from "../../img/crown.png";
@@ -34,7 +34,7 @@ const Intro = () => {
           </span>
         </div>
         <a href={Resume} download>
-          <button className="button s-button ">Download CV</button>
+          <button className="button s-button">Download Resume</button>
         </a>
         <div className="i-icons">
           <a href="https://github.com/Rahul850kr" target="_blank">
@@ -68,8 +68,9 @@ const Intro = () => {
             left: "-9rem",
           }}
         ></div>
-        <img className="lastImg" src={Rahul2} alt=""/>
+       
       </div>
+      <img className="lastImg" src={Rahul2} alt=""/>
     </div>
   );
 };

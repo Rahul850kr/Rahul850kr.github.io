@@ -6,6 +6,7 @@ import gear from "../../img/GearBest.png";
 import shopbop from "../../img/ShopBop.png"
 import { useContext } from "react";
 import { themeContext } from "../../Context";
+import credo from "../../img/credobeauty.png"
 
 const Projects = () => {
 
@@ -14,7 +15,7 @@ const Projects = () => {
   return (
     <div className="projects" id="Project">
       <div className="p-heading projectHead ">
-        <span style={darkMode?{color:"white"}:null} >My Awesome </span>
+        <span style={darkMode?{color:"white"}:null} >My </span>
         <span>Projects</span>
         <div className="blur s-blur2" style={{background:"var(--purple)"}} ></div>
         <div className='blur s-blur1' style={{background:"#ABF1FF94"}} ></div>
@@ -22,6 +23,15 @@ const Projects = () => {
         {/* <div className='blur s-blur1' style={{background:"#ABF1FF94",zIndex:1}} ></div> */}
       </div>
       <div className="p-mainDiv">
+      <ProjectCard
+          live="https://toggltrack521.netlify.app/"
+          git="https://github.com/Rahul850kr/TogglTrack"
+          tech={["HTML", "CSS", "Javascript", "React", "Redux", "Chakra UI","NodeJS","Express","MongoDB"]}
+          desc="Toggl Track (formerly Toggl) is a time tracking software operated by Toggl OÜ that offers online time tracking and reporting services through their website along with mobile and desktop applications."
+          pFName="TogglTrack"
+          pLName="Clone"
+          image="https://github.com/Rahul850kr/habitual-oatmeal-3228/raw/master/Frontend/TogglTrack%20Screenshots/Homepage1.png?raw=true"
+        />
         <ProjectCard
           live="https://lumen5-clone-project.netlify.app/"
           git="https://github.com/Rahul850kr/synonymous-wall-8152"
@@ -53,6 +63,16 @@ const Projects = () => {
           pLName="Clone"
           image={shopbop}
         />
+        <ProjectCard
+          live="https://credo-beauty-clone.netlify.app/"
+          git="https://github.com/Rahul850kr/Credo-beauty-clone-project"
+          tech={["HTML", "CSS", "Javascript","Local Storage"]}
+          desc="Credobeauty is an online e-commerce cosmetic products website.It is a collaborative project and i completed this project in 5 days."
+          pFName="Credobeauty"
+          pLName="Clone"
+          image={credo}
+        />
+        
       </div>
     </div>
   );

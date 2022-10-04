@@ -14,21 +14,24 @@ const SoftSkills = () => {
   const darkMode = theme.state.darkMode;
   return (
     <div className="services" id="Soft">
-      <div className="awesome">
-        <span style={darkMode?{color:"white"}:null} >My Awesome</span>
-        <span>Soft Skills</span>
+      <div className="awesome softskill ">
+        <span style={darkMode?{color:"white"}:null} >My Soft</span>
+        <span>Skills</span>
         
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
       <div className="cards">
-        <div style={{ left: "14rem" }}>
+        <div className="team">
           <Card image="https://media.csesoc.org.au/content/images/2019/10/learn11.gif" heading="Team Work" />
         </div>
-        <div style={{ left: "-4rem", top: "12rem" }}>
+        <div className="time">
           <Card image="https://c.tenor.com/FgO2V5QVEysAAAAC/time-clock.gif" heading="Time Management" />
         </div>
-        <div style={{ left: "32rem", top: "12rem" }}>
+        <div className="adapt">
           <Card image={Humble} heading="Adaptability" />
+        </div>
+        <div className="adapt">
+          <Card image="https://cdn4.vectorstock.com/i/1000x1000/79/48/project-management-icon-flat-design-vector-14247948.jpg" heading="Project Management" />
         </div>
         <div className="blur s-blur2" style={{background:"var(--purple)"}} ></div>
       </div>
