@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c86d5075.css",
-    "main.js": "/static/js/main.ad71380f.js",
+    "main.css": "/static/css/main.34716aca.css",
+    "main.js": "/static/js/main.69393d2b.js",
     "static/media/ShopBop.png": "/static/media/ShopBop.a68a8a8de0599eb4f0d4.png",
     "static/media/rahull.png": "/static/media/rahull.38560b54e29e2da58437.png",
     "static/media/credobeauty.png": "/static/media/credobeauty.6fa585f0c3b7643d5853.png",
@@ -17,11 +17,11 @@
     "static/media/crown.png": "/static/media/crown.dbe416beae9b49b842ab.png",
     "static/media/Vector2.png": "/static/media/Vector2.28db5bfd58081dd1df1b.png",
     "index.html": "/index.html",
-    "main.c86d5075.css.map": "/static/css/main.c86d5075.css.map",
-    "main.ad71380f.js.map": "/static/js/main.ad71380f.js.map"
+    "main.34716aca.css.map": "/static/css/main.34716aca.css.map",
+    "main.69393d2b.js.map": "/static/js/main.69393d2b.js.map"
   },
   "entrypoints": [
-    "static/css/main.c86d5075.css",
-    "static/js/main.ad71380f.js"
+    "static/css/main.34716aca.css",
+    "static/js/main.69393d2b.js"
   ]
 }
