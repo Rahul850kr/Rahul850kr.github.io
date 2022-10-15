@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a0b194a7.css",
-    "main.js": "/static/js/main.54738b89.js",
+    "main.js": "/static/js/main.133138ea.js",
     "static/media/ShopBop.png": "/static/media/ShopBop.a68a8a8de0599eb4f0d4.png",
     "static/media/rahull.png": "/static/media/rahull.38560b54e29e2da58437.png",
     "static/media/credobeauty.png": "/static/media/credobeauty.6fa585f0c3b7643d5853.png",
@@ -18,10 +18,10 @@
     "static/media/Vector2.png": "/static/media/Vector2.28db5bfd58081dd1df1b.png",
     "index.html": "/index.html",
     "main.a0b194a7.css.map": "/static/css/main.a0b194a7.css.map",
-    "main.54738b89.js.map": "/static/js/main.54738b89.js.map"
+    "main.133138ea.js.map": "/static/js/main.133138ea.js.map"
   },
   "entrypoints": [
     "static/css/main.a0b194a7.css",
-    "static/js/main.54738b89.js"
+    "static/js/main.133138ea.js"
   ]
 }
