@@ -22,7 +22,7 @@
   padding: 0.5rem 3.5rem;
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 580px) {
   .techSkills {
     height: 160rem;
     /* border: 5px solid green; */
@@ -46,7 +46,7 @@
   }
 }
 
-@media all and (min-width:481px) and (max-width: 1250px) {
+@media all and (min-width:581px) and (max-width: 1250px) {
   .techSkills {
     height: 90rem;
     /* border: 5px solid green; */

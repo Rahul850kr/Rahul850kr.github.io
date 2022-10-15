@@ -63,6 +63,7 @@ body{
 
 .skillWraper {
   position: relative;
+  /* border: 1px solid red; */
 }
 
 .skillWraper:hover .skillsImg {
@@ -104,6 +105,7 @@ body{
   text-align: center;
   display: flex;
   justify-content: center;
+  /* border: 1px solid red; */
 }
 
 @media all and (max-width:480px){

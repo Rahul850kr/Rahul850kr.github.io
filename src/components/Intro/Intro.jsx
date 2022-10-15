@@ -55,7 +55,7 @@ const Intro = () => {
         <img
         src={Glassesimogi} alt="" />
         <div className="floating"  style={{ top: "-4%", left: "60%" }}>
-          <FloatingDiv image={Crown} txt1="Web" txt2="Developer" />
+          {/* <FloatingDiv image={Crown} txt1="Web" txt2="Developer" /> */}
         </div>
         {/* <div className="blur" style={{ background: "rgb(238,210,255)" }}></div> */}
         <div

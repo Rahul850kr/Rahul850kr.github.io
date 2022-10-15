@@ -29,7 +29,7 @@ const About = () => {
       <div className="card about-card">
         Software professional with expertise in JavaScript, React.js, MongoDB,
         and experience in solving more than 200 Ds&Algo problems.Looking forward
-        to being a part of an organization a product-based company that allows
+        to being a part of an organization that allows
         constant learning and development of my technical and management skills.
         Experience in working on various projects through remote collaboration.
       </div>
