@@ -45,7 +45,7 @@ const Projects = () => {
         />
         <ProjectCard
           live="https://gearbest-project.vercel.app/"
-          git="https://github.com/Rahul850kr/unadvised-ducks-1309/tree/master/gear_best_clone"
+          git="https://github.com/Rahul850kr/Gear-Best-Clone-Project"
           tech={["HTML", "CSS", "Javascript", "React", "Redux", "Chakra UI"]}
           desc="Gearbest is a Chinese online e-commerce website.It is my first and individual react project completed in 5
           days."
@@ -55,7 +55,7 @@ const Projects = () => {
         />
         <div className="blur s-blur2" style={{background:"var(--purple)",left:"70%",top:"50%"}} ></div>
         <ProjectCard
-          live="https://enchanting-banoffee-050dd5.netlify.app/"
+          live="https://shopbop-clone-two.vercel.app/"
           git="https://github.com/Rahul850kr/ShopBob-Clone-Project"
           tech={["HTML", "CSS", "Javascript","Local Storage"]}
           desc="Shopbop is a US online fashion apparel and accessories shop opened in 1999.It is a collaborative project and i completed this project in 5 days."
