@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.265e7d46.css",
-    "main.js": "/static/js/main.006a1c90.js",
+    "main.js": "/static/js/main.d79d2a9e.js",
     "static/media/ShopBop.png": "/static/media/ShopBop.a68a8a8de0599eb4f0d4.png",
     "static/media/rahull.png": "/static/media/rahull.38560b54e29e2da58437.png",
     "static/media/credobeauty.png": "/static/media/credobeauty.6fa585f0c3b7643d5853.png",
     "static/media/GearBest.png": "/static/media/GearBest.fd692ba838f1ace3df2c.png",
-    "static/media/Rahul_Kumar_Resume.pdf": "/static/media/Rahul_Kumar_Resume.7482b8369604b4af88a9.pdf",
     "static/media/Lumen5.png": "/static/media/Lumen5.d0bbf2c88a8e60b50394.png",
+    "static/media/Rahul_Kumar_Resume.pdf": "/static/media/Rahul_Kumar_Resume.cb5fd7e3ad68a96e96b6.pdf",
     "static/media/rah.jpeg": "/static/media/rah.0f3f80897f632d79574a.jpeg",
     "static/media/glassesimoji.png": "/static/media/glassesimoji.a08bdab12e8eb56a6874.png",
     "static/media/Gumela Regular.otf": "/static/media/Gumela Regular.0ae83c6988a536716eb4.otf",
@@ -17,10 +17,10 @@
     "static/media/Vector2.png": "/static/media/Vector2.28db5bfd58081dd1df1b.png",
     "index.html": "/index.html",
     "main.265e7d46.css.map": "/static/css/main.265e7d46.css.map",
-    "main.006a1c90.js.map": "/static/js/main.006a1c90.js.map"
+    "main.d79d2a9e.js.map": "/static/js/main.d79d2a9e.js.map"
   },
   "entrypoints": [
     "static/css/main.265e7d46.css",
-    "static/js/main.006a1c90.js"
+    "static/js/main.d79d2a9e.js"
   ]
 }
