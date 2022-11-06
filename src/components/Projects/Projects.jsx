@@ -3,30 +3,40 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 import "./Projects.css";
 import lumen5 from "../../img/Lumen5.png";
 import gear from "../../img/GearBest.png";
-import shopbop from "../../img/ShopBop.png"
+import shopbop from "../../img/ShopBop.png";
 import { useContext } from "react";
 import { themeContext } from "../../Context";
-import credo from "../../img/credobeauty.png"
+import credo from "../../img/credobeauty.png";
 
 const Projects = () => {
-
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
     <div className="projects" id="Project">
       <div className="p-heading projectHead ">
-        <span style={darkMode?{color:"white"}:null} >My </span>
+        <span style={darkMode ? { color: "white" } : null}>My </span>
         <span>Projects</span>
-        <div className="blur s-blur2" style={{background:"var(--purple)"}} ></div>
-        <div className='blur s-blur1' style={{background:"#ABF1FF94"}} ></div>
-
-        {/* <div className='blur s-blur1' style={{background:"#ABF1FF94",zIndex:1}} ></div> */}
+        <div
+          className="blur s-blur2"
+          style={{ background: "var(--purple)" }}
+        ></div>
+        <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
       <div className="p-mainDiv">
-      <ProjectCard
+        <ProjectCard
           live="https://toggltrack521.netlify.app/"
           git="https://github.com/Rahul850kr/TogglTrack"
-          tech={["HTML", "CSS", "Javascript", "React", "Redux", "Chakra UI","NodeJS","Express","MongoDB"]}
+          tech={[
+            "HTML",
+            "CSS",
+            "Javascript",
+            "React",
+            "Redux",
+            "Chakra UI",
+            "NodeJS",
+            "Express",
+            "MongoDB",
+          ]}
           desc="Toggl Track (formerly Toggl) is a time tracking software operated by Toggl OÜ that offers online time tracking and reporting services through their website along with mobile and desktop applications."
           pFName="TogglTrack"
           pLName="Clone"
@@ -53,11 +63,14 @@ const Projects = () => {
           pLName="Clone"
           image={gear}
         />
-        <div className="blur s-blur2" style={{background:"var(--purple)",left:"70%",top:"50%"}} ></div>
+        <div
+          className="blur s-blur2"
+          style={{ background: "var(--purple)", left: "70%", top: "50%" }}
+        ></div>
         <ProjectCard
           live="https://shopbop-clone-two.vercel.app/"
           git="https://github.com/Rahul850kr/ShopBob-Clone-Project"
-          tech={["HTML", "CSS", "Javascript","Local Storage"]}
+          tech={["HTML", "CSS", "Javascript", "Local Storage"]}
           desc="Shopbop is a US online fashion apparel and accessories shop opened in 1999.It is a collaborative project and i completed this project in 5 days."
           pFName="Shopbop"
           pLName="Clone"
@@ -66,13 +79,12 @@ const Projects = () => {
         <ProjectCard
           live="https://credo-beauty-clone.netlify.app/"
           git="https://github.com/Rahul850kr/Credo-beauty-clone-project"
-          tech={["HTML", "CSS", "Javascript","Local Storage"]}
+          tech={["HTML", "CSS", "Javascript", "Local Storage"]}
           desc="Credobeauty is an online e-commerce cosmetic products website.It is a collaborative project and i completed this project in 5 days."
           pFName="Credobeauty"
           pLName="Clone"
           image={credo}
         />
-        
       </div>
     </div>
   );

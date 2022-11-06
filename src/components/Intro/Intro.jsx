@@ -2,19 +2,13 @@ import React, { useContext } from "react";
 import "./Intro.css";
 import Github from "../../img/github.png";
 import LinkedIn from "../../img/linkedin.png";
-// import Instagram from "../../img/instagram.png";
 import Vector1 from "../../img/Vector1.png";
 import Vector2 from "../../img/Vector2.png";
 import Rahul from "../../img/rahull.png";
 import Rahul2 from "../../img/rah.jpeg";
-
-// import Thumbup from "../../img/thumbup.png";
-import Crown from "../../img/crown.png";
 import Glassesimogi from "../../img/glassesimoji.png";
-import FloatingDiv from "../FloatingDiv/FloatingDiv";
 import Resume from "./Rahul_Kumar_Resume.pdf";
 import { themeContext } from "../../Context";
-// import { motion } from "framer-motion";
 
 const Intro = () => {
   const transition = { duration: 2, type: "spring" };
@@ -54,10 +48,6 @@ const Intro = () => {
         <img src={Rahul} alt="" />
         <img
         src={Glassesimogi} alt="" />
-        <div className="floating"  style={{ top: "-4%", left: "60%" }}>
-          {/* <FloatingDiv image={Crown} txt1="Web" txt2="Developer" /> */}
-        </div>
-        {/* <div className="blur" style={{ background: "rgb(238,210,255)" }}></div> */}
         <div
           className="blur"
           style={{
