@@ -1,12 +1,12 @@
 .github {
   /* border: 5px solid blue; */
-  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 80%;
   padding-bottom: 10px;
   box-sizing: border-box;
+  margin: auto;
 }
 
 .code {
@@ -23,7 +23,7 @@
     /* width: 130%; */
     padding: 0;
     /* border:5px solid pink; */
-    margin: 0;
+    margin: auto;
   }
   .code > :nth-child(1) {
     /* transform: scale(0.1);
