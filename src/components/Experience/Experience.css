@@ -8,6 +8,22 @@
   /* border: 5px solid red; */
 }
 
+.stats{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.stats>img{
+  /* width: 100%; */
+  display: flex;
+  gap: 2rem;
+}
+
 .achievement {
   display: flex;
   flex-direction: column;
@@ -56,12 +72,36 @@
     margin-top: 2rem;
     /* border: 2px solid blue; */
     padding: 0;
-    width: 100%;
+    /* width: 100%; */
   }
+  
+.stats{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.stats>img{
+width: auto;
+}
 
   .circle {
     margin-bottom: 0.3rem;
   }
+}
+
+
+
+
+@media all and (max-width:500px){
+ 
+ .stats>img{
+  width: 15rem
+ }
 }
 
 

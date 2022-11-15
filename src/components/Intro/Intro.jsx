@@ -27,8 +27,11 @@ const Intro = () => {
             websites and web applications.
           </span>
         </div>
+      
         <a href={Resume} download>
-          <button className="button s-button">Download Resume</button>
+          <button onClick={()=>{
+            window.open("https://drive.google.com/file/d/1MZsQNH9LX3GykXDi95zm6RQGS8cRl_GE/view?usp=sharing","_blank")
+          }} className="button s-button">Download Resume</button>
         </a>
         <div className="i-icons">
           <a href="https://github.com/Rahul850kr" target="_blank">
