@@ -13,30 +13,24 @@
   margin-bottom: 3rem;
   position: relative;
 }
-.calendar {
-  /* border: 2px solid red; */
-}
+
 
 @media all and (max-width: 1250px) {
   .github {
     height:auto;
-    /* width: 130%; */
     padding: 0;
-    /* border:5px solid pink; */
     margin: auto;
   }
   .code > :nth-child(1) {
-    /* transform: scale(0.1);
-        border: 1px solid red; */
     font-size: 30px;
   }
   .code > :nth-child(2) {
-    /* transform: scale(0.2); */
+   
     font-size: 40px;
   }
   .code {
     margin-bottom: 0;
-    /* border: 2px solid red; */
+    
     height: 4rem;
   }
   .react-activity-calendar__legend-colors.styles_legendColors__FYXRi > * {
