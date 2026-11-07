@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Rahul Kumar Portfolio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Rahul Kumar, Tech Lead and Full Stack Developer at YourDOST (Flutter · React · Node.js · AWS · AI). 4+ years building production web and mobile apps.">
+<meta name="description" content="Rahul Kumar, Fullstack Engineer and Tech Lead at YourDOST (Node.js · Java · Spring Boot · Microservices · AWS). 4+ years building APIs, distributed systems and cloud infrastructure.">
 <meta name="author" content="Rahul Kumar">
-<meta property="og:title" content="Rahul Kumar, Tech Lead &amp; Full Stack Developer">
-<meta property="og:description" content="Building scalable web and mobile apps with Flutter, React, Node.js, Spring Boot and AWS.">
+<meta property="og:title" content="Rahul Kumar, Fullstack Engineer &amp; Tech Lead">
+<meta property="og:description" content="Designing scalable APIs, microservices and cloud infrastructure with Node.js, Spring Boot and AWS.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -329,9 +329,26 @@ svg { flex-shrink: 0; }
 .sub-head { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; margin: 48px 0 18px; color: var(--text); display: flex; align-items: center; gap: 12px; }
 .sub-head::after { content: ""; flex: 1; height: 1px; background: var(--border); }
 
+/* ---------- Recommendations ---------- */
+.recs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: start; }
+.recs-grid > * { min-width: 0; display: flex; }
+.rec-text.short { font-size: 1.15rem; color: var(--text); }
+.rec-card { margin: 0; display: flex; flex-direction: column; width: 100%; }
+.rec-quote { font-family: var(--font-display); font-size: 3rem; line-height: 1; height: 28px; margin-bottom: 14px; }
+.rec-text { margin: 0; color: var(--text-dim); font-size: .98rem; line-height: 1.75; flex: 1; margin-bottom: 24px; display: grid; gap: 14px; }
+.rec-author { display: flex; align-items: center; gap: 14px; padding-top: 20px; border-top: 1px solid var(--border); }
+.rec-avatar { width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; display: grid; place-items: center; background: var(--gradient); color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
+.rec-author > div { min-width: 0; }
+.rec-name { font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; display: flex; align-items: center; gap: 8px; }
+.rec-name svg { width: 15px; height: 15px; color: #0a66c2; }
+.rec-name-link { width: fit-content; transition: color .2s ease; }
+.rec-name-link:hover { color: var(--accent-2); }
+.rec-title { color: var(--text-dim); font-size: .85rem; }
+.rec-relation { color: var(--text-faint); font-size: .8rem; font-style: italic; margin-top: 2px; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .about-grid, .skills-grid, .projects-grid { grid-template-columns: 1fr; }
+  .about-grid, .skills-grid, .projects-grid, .recs-grid { grid-template-columns: 1fr; }
   .interests-grid, .certs-grid, .certs-grid.three { grid-template-columns: repeat(2, 1fr); }
   .certs-grid.three > :last-child { grid-column: 1 / -1; }
   .award-feature { flex-direction: column; text-align: center; padding: 32px 24px; }
@@ -345,10 +362,12 @@ svg { flex-shrink: 0; }
   .floating-tag.tl { left: 10px; }
   .floating-tag.br { right: 10px; }
 }
-@media (max-width: 720px) {
+@media (max-width: 960px) {
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: grid; }
   .mobile-menu.open { display: flex; }
+}
+@media (max-width: 720px) {
   .section { padding-block: 70px; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
   .contact-wrap { padding: 40px 24px; }
   .exp-head { flex-direction: column; }
@@ -409,6 +428,7 @@ svg { flex-shrink: 0; }
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#awards">Awards</a></li>
+      <li><a href="#recommendations">Recommendations</a></li>
     </ul>
     <a href="#contact" class="btn btn-primary nav-cta">Let's Talk</a>
     <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><svg><use href="#i-menu"/></svg></button>
@@ -419,6 +439,7 @@ svg { flex-shrink: 0; }
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#awards">Awards</a>
+    <a href="#recommendations">Recommendations</a>
     <a href="#contact">Let's Talk</a>
   </div>
 </nav>
@@ -428,10 +449,10 @@ svg { flex-shrink: 0; }
   <header class="hero" id="top">
     <div class="hero-content">
       <div class="hero-badge"><span class="pulse"></span>Tech Lead at YourDOST · Bangalore</div>
-      <h1>Hi, I'm Rahul —<br><span class="gradient-text">Full Stack Developer</span></h1>
-      <div class="hero-role">Flutter · React · Node.js · AWS</div>
-      <div class="hero-stack"><span>Flutter</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Spring Boot</span><span>AWS</span></div>
-      <p class="hero-tagline">I lead the tech team at YourDOST and still write code every day, building web and mobile apps, AI features and partner integrations end to end.</p>
+      <h1>Hi, I'm Rahul —<br><span class="gradient-text">Fullstack Engineer</span></h1>
+      <div class="hero-role">Node.js · Spring Boot · Microservices · AWS</div>
+      <div class="hero-stack"><span>Node.js</span><span>Java</span><span>Spring Boot</span><span>MongoDB</span><span>MySQL</span><span>AWS</span></div>
+      <p class="hero-tagline">I design and build the systems behind products: scalable REST APIs, microservices, AI pipelines and the AWS infrastructure they run on. I also lead the tech team at YourDOST.</p>
       <div>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">Get in Touch <svg class="arrow"><use href="#i-arrow"/></svg></a>
@@ -472,12 +493,12 @@ svg { flex-shrink: 0; }
   <section class="section" id="about">
     <div class="section-head reveal">
       <span class="eyebrow">About</span>
-      <h2 class="section-title">Turning complex problems into <span class="gradient-text">reliable products</span></h2>
+      <h2 class="section-title">Turning complex problems into <span class="gradient-text">reliable systems</span></h2>
     </div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>Tech Lead and Full Stack Developer with 4+ years of experience shipping scalable, production-ready software across web, mobile and cloud. At YourDOST I <strong>lead and mentor the tech team</strong> while still coding hands-on across Flutter, React, Next.js, Node.js, Spring Boot, MongoDB and MySQL.</p>
-        <p>Recently I built an <strong>AI pipeline that turns counselling video sessions into text with Whisper and writes session summaries with OpenAI</strong>, and a <strong>Partner Integration platform</strong> of APIs and a plug-in session widget that won me the Innovation Award. Before that I built real-time chat on Firebase, audio and video counselling on Agora, enterprise SSO and the AWS infrastructure behind a platform used by thousands of people every day.</p>
+        <p>Fullstack Engineer and Tech Lead with 4+ years of experience designing and running production systems. I build <strong>RESTful APIs and microservices with Node.js, Express, Java and Spring Boot</strong>, model data in MongoDB and MySQL, and own deployment on AWS with NGINX, SSL/TLS, scaling and monitoring.</p>
+        <p>At YourDOST I <strong>lead and mentor the tech team</strong> and still code every day. Recently I designed the <strong>Partner Integration APIs</strong> that won me the Innovation Award, and built an <strong>AI pipeline that transcribes counselling sessions with Whisper and summarises them with OpenAI</strong>. I've also built booking and red-flag monitoring APIs, enterprise SSO and real-time messaging for a platform used by thousands of people every day. I work across the frontend (Flutter, React) when a feature needs it, but my focus is the backend.</p>
       </div>
       <div class="about-side reveal" style="--d:.08s">
         <div class="card info-card">
@@ -487,7 +508,7 @@ svg { flex-shrink: 0; }
         </div>
         <div class="card info-card">
           <h4><svg><use href="#i-briefcase"/></svg> Currently</h4>
-          <p style="color:var(--text);font-weight:600">Tech Lead · Full Stack Developer</p>
+          <p style="color:var(--text);font-weight:600">Tech Lead · Fullstack Engineer</p>
           <p>YourDOST · since Dec 2022</p>
         </div>
         <div class="card info-card">
@@ -504,15 +525,15 @@ svg { flex-shrink: 0; }
     <div class="section-head reveal">
       <span class="eyebrow">Skills</span>
       <h2 class="section-title">My <span class="gradient-text">technical toolkit</span></h2>
-      <p class="section-subtitle">The languages, frameworks and platforms I use to ship production web and mobile apps.</p>
+      <p class="section-subtitle">Backend first: the languages, frameworks and platforms I use to build and run production systems.</p>
     </div>
     <div class="skills-grid">
-      <div class="reveal" style="--d:0s"><div class="card skill-card"><h3><span class="num">01</span>Frontend &amp; Mobile</h3><div class="chip-row"><span class="chip">Flutter</span><span class="chip">React.js</span><span class="chip">Next.js</span><span class="chip">AngularJS</span><span class="chip">Redux</span><span class="chip">Material UI</span><span class="chip">HTML / CSS</span></div></div></div>
-      <div class="reveal" style="--d:.06s"><div class="card skill-card"><h3><span class="num">02</span>Backend</h3><div class="chip-row"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">RESTful APIs</span><span class="chip">Microservices</span></div></div></div>
-      <div class="reveal" style="--d:.12s"><div class="card skill-card"><h3><span class="num">03</span>Databases &amp; Real-time</h3><div class="chip-row"><span class="chip">MongoDB</span><span class="chip">MySQL</span><span class="chip">Firebase</span><span class="chip">Real-time Chat</span><span class="chip">Push Notifications</span></div></div></div>
-      <div class="reveal" style="--d:.18s"><div class="card skill-card"><h3><span class="num">04</span>Cloud &amp; DevOps</h3><div class="chip-row"><span class="chip">AWS</span><span class="chip">NGINX</span><span class="chip">SSL / TLS</span><span class="chip">CI/CD</span><span class="chip">Server Provisioning</span><span class="chip">Cloudflare</span><span class="chip">GoDaddy DNS</span></div></div></div>
-      <div class="reveal" style="--d:.24s"><div class="card skill-card"><h3><span class="num">05</span>AI &amp; Integrations</h3><div class="chip-row"><span class="chip">OpenAI API</span><span class="chip">Whisper (speech-to-text)</span><span class="chip">AI Summarisation</span><span class="chip">Partner APIs</span><span class="chip">Embeddable Widgets</span><span class="chip">SSO</span><span class="chip">JWT</span><span class="chip">Agora SDK</span><span class="chip">Stripe</span></div></div></div>
-      <div class="reveal" style="--d:.30s"><div class="card skill-card"><h3><span class="num">06</span>Leadership &amp; Soft Skills</h3><div class="chip-row"><span class="chip">Technical Leadership</span><span class="chip">Problem Solving</span><span class="chip">Teamwork</span><span class="chip">Adaptability</span><span class="chip">Time Management</span><span class="chip">Project Management</span><span class="chip">Mentoring</span></div></div></div>
+      <div class="reveal" style="--d:0s"><div class="card skill-card"><h3><span class="num">01</span>Backend &amp; APIs</h3><div class="chip-row"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">RESTful APIs</span><span class="chip">Microservices</span><span class="chip">Partner / Public APIs</span></div></div></div>
+      <div class="reveal" style="--d:.06s"><div class="card skill-card"><h3><span class="num">02</span>Databases &amp; Real-time</h3><div class="chip-row"><span class="chip">MongoDB</span><span class="chip">MySQL</span><span class="chip">Data Modelling</span><span class="chip">Firebase</span><span class="chip">Real-time Messaging</span><span class="chip">Push Notifications</span></div></div></div>
+      <div class="reveal" style="--d:.12s"><div class="card skill-card"><h3><span class="num">03</span>Cloud &amp; DevOps</h3><div class="chip-row"><span class="chip">AWS</span><span class="chip">NGINX Reverse Proxy</span><span class="chip">SSL / TLS</span><span class="chip">CI/CD</span><span class="chip">Server Provisioning</span><span class="chip">Scaling &amp; Monitoring</span><span class="chip">Cloudflare</span><span class="chip">DNS</span></div></div></div>
+      <div class="reveal" style="--d:.18s"><div class="card skill-card"><h3><span class="num">04</span>Security &amp; Auth</h3><div class="chip-row"><span class="chip">SSO</span><span class="chip">JWT</span><span class="chip">bcrypt</span><span class="chip">Role-based Workflows</span><span class="chip">DDoS Protection</span><span class="chip">Secure Data Handling</span></div></div></div>
+      <div class="reveal" style="--d:.24s"><div class="card skill-card"><h3><span class="num">05</span>AI &amp; Integrations</h3><div class="chip-row"><span class="chip">OpenAI API</span><span class="chip">Whisper (speech-to-text)</span><span class="chip">AI Summarisation Pipelines</span><span class="chip">Agora SDK</span><span class="chip">Stripe</span><span class="chip">Embeddable Widgets</span></div></div></div>
+      <div class="reveal" style="--d:.30s"><div class="card skill-card"><h3><span class="num">06</span>Frontend &amp; Leadership</h3><div class="chip-row"><span class="chip">Flutter</span><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Technical Leadership</span><span class="chip">Mentoring</span><span class="chip">Code Reviews</span><span class="chip">Problem Solving</span></div></div></div>
     </div>
   </section>
 
@@ -521,26 +542,24 @@ svg { flex-shrink: 0; }
     <div class="section-head reveal">
       <span class="eyebrow">Experience</span>
       <h2 class="section-title">Where I've made <span class="gradient-text">an impact</span></h2>
-      <p class="section-subtitle">4+ years across mental-health and home-services platforms, owning features from the UI to the servers they run on.</p>
+      <p class="section-subtitle">4+ years building the APIs, services and infrastructure behind mental-health and home-services platforms.</p>
     </div>
     <div class="timeline">
       <div class="reveal" style="--d:0s">
         <div class="timeline-item"><span class="timeline-dot"></span>
-          <div class="exp-head"><div class="exp-role">Tech Lead · Full Stack Developer <span class="exp-company">· YourDOST</span></div><span class="exp-period">Dec 2022 – Present</span></div>
+          <div class="exp-head"><div class="exp-role">Tech Lead · Fullstack Engineer <span class="exp-company">· YourDOST</span></div><span class="exp-period">Dec 2022 – Present</span></div>
           <div class="exp-project">Bangalore, India · Online counselling and emotional wellness platform</div>
           <ul class="exp-points">
-            <li>Lead the tech team: set technical direction, review code, plan delivery and mentor developers, while coding hands-on as a full stack developer.</li>
-            <li>Built a Partner Integration platform: partners use our APIs behind their own UI, and add counselling sessions through a packaged widget with no session logic to build. This work won the <strong style="color:var(--text)">Innovation Award</strong>.</li>
-            <li>Built an AI session-summary pipeline that transcribes online psychologist sessions with OpenAI Whisper and generates structured session summaries with an OpenAI model.</li>
-            <li>Led end-to-end development of the YourDOST web and mobile platform in Flutter, serving thousands of users daily.</li>
+            <li>Lead the tech team: set technical direction and architecture, review code, plan delivery and mentor developers, while coding hands-on every day.</li>
+            <li>Designed the Partner Integration APIs so partners can run YourDOST services behind their own UI, plus a packaged session widget so they need no session logic of their own. This work won the <strong style="color:var(--text)">Innovation Award</strong>.</li>
+            <li>Built an AI pipeline that transcribes online psychologist sessions with OpenAI Whisper and generates session summaries with an OpenAI model.</li>
             <li>Designed RESTful APIs for authentication, appointment booking, red-flag user management and enterprise workflows.</li>
-            <li>Built real-time chat on Firebase with presence tracking, push notifications and secure data handling.</li>
-            <li>Developed audio, video and hybrid counselling sessions with the Agora SDK for high-quality, low-latency streaming.</li>
-            <li>Built microservices with Java and Spring Boot, and full stack apps on Node.js, Express, MongoDB and MySQL with React, AngularJS and Next.js frontends.</li>
+            <li>Built microservices with Java and Spring Boot, and Node.js and Express services on MongoDB and MySQL.</li>
             <li>Integrated Single Sign-On (SSO) for enterprise clients.</li>
-            <li>Ran AWS servers, NGINX reverse proxy, SSL/TLS, scaling and monitoring, plus DNS on GoDaddy and Cloudflare for CDN performance and DDoS protection.</li>
+            <li>Run the AWS infrastructure: server provisioning, NGINX reverse proxy, SSL/TLS, scaling and monitoring, plus DNS on GoDaddy and Cloudflare for CDN performance and DDoS protection.</li>
+            <li>Built real-time messaging on Firebase with presence tracking and push notifications, and audio and video sessions on the Agora SDK, for a platform used by thousands of people daily.</li>
           </ul>
-          <div class="exp-stack"><span>Flutter</span><span>React</span><span>Next.js</span><span>AngularJS</span><span>Node.js</span><span>Spring Boot</span><span>OpenAI</span><span>Whisper</span><span>Firebase</span><span>Agora SDK</span><span>AWS</span><span>NGINX</span></div>
+          <div class="exp-stack"><span>Node.js</span><span>Express</span><span>Java</span><span>Spring Boot</span><span>Microservices</span><span>MongoDB</span><span>MySQL</span><span>AWS</span><span>NGINX</span><span>OpenAI</span><span>Whisper</span><span>Firebase</span><span>Flutter</span></div>
         </div>
       </div>
       <div class="reveal" style="--d:.05s">
@@ -548,12 +567,12 @@ svg { flex-shrink: 0; }
           <div class="exp-head"><div class="exp-role">Software Development Engineer <span class="exp-company">· Trydan Home Services</span></div><span class="exp-period">Nov 2021 – Nov 2022</span></div>
           <div class="exp-project">Remote · Home services booking platform</div>
           <ul class="exp-points">
-            <li>Owned development end to end across frontend, backend and DevOps for the complete product lifecycle.</li>
-            <li>Built the Booking Services page, where users browse and book home services with real-time availability and confirmation flows.</li>
-            <li>Shipped new features and UI improvements for the web and mobile apps in React and Flutter.</li>
-            <li>Built and maintained Node.js and Express APIs for service management, and improved performance, scalability and deployment pipelines.</li>
+            <li>Built and maintained Node.js and Express APIs for service management, integrated with the database.</li>
+            <li>Built the booking flow with real-time availability and confirmation, from the API to the Booking Services page.</li>
+            <li>Owned backend and DevOps work: performance and scalability improvements and faster deployment pipelines.</li>
+            <li>Contributed features to the React web app and the Flutter mobile app.</li>
           </ul>
-          <div class="exp-stack"><span>React</span><span>Flutter</span><span>Node.js</span><span>Express</span><span>REST APIs</span><span>DevOps</span></div>
+          <div class="exp-stack"><span>Node.js</span><span>Express</span><span>REST APIs</span><span>DevOps</span><span>React</span><span>Flutter</span></div>
         </div>
       </div>
     </div>
@@ -564,7 +583,7 @@ svg { flex-shrink: 0; }
     <div class="section-head reveal">
       <span class="eyebrow">Projects</span>
       <h2 class="section-title">Things I've <span class="gradient-text">built</span></h2>
-      <p class="section-subtitle">Production work first, then side projects and earlier full stack builds.</p>
+      <p class="section-subtitle">Production backend work first, then side projects and earlier full stack builds.</p>
     </div>
     <div class="projects-grid" id="projectsGrid"></div>
   </section>
@@ -597,6 +616,51 @@ svg { flex-shrink: 0; }
       <div class="reveal" style="--d:0s"><div class="card cert-card"><div class="cert-icon cyan"><svg><use href="#i-cloud"/></svg></div><div><div class="cert-name">Google Firebase Fundamentals</div><div class="cert-sub">Google</div></div></div></div>
       <div class="reveal" style="--d:.06s"><div class="card cert-card"><div class="cert-icon cyan"><svg><use href="#i-code"/></svg></div><div><div class="cert-name">React and Next.js Advanced Development</div><div class="cert-sub">Udemy / Pluralsight</div></div></div></div>
       <div class="reveal" style="--d:.12s"><div class="card cert-card"><div class="cert-icon cyan"><svg><use href="#i-layers"/></svg></div><div><div class="cert-name">Java and Spring Boot Microservices</div><div class="cert-sub">Coursera</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- RECOMMENDATIONS -->
+  <section class="section" id="recommendations">
+    <div class="section-head reveal">
+      <span class="eyebrow">Recommendations</span>
+      <h2 class="section-title">What people <span class="gradient-text">say about me</span></h2>
+      <p class="section-subtitle">Recommendations from colleagues I've worked with at YourDOST, from my LinkedIn profile.</p>
+    </div>
+    <div class="recs-grid">
+      <div class="reveal" style="--d:0s">
+        <figure class="card rec-card">
+          <div class="rec-quote gradient-text" aria-hidden="true">&ldquo;</div>
+          <blockquote class="rec-text">
+            <p>I had the pleasure of working with Rahul at YourDost. Rahul is a strong independent contributor who consistently approaches every task with sincerity, ownership, and a commitment to excellence. One of the qualities I admire most about him is his dedication to writing clean, maintainable, and high-quality code. He never settles for simply completing a task—he always strives to build the best possible solution.</p>
+            <p>We collaborated on a few frontend projects, and working alongside Rahul was a great learning experience. I picked up several frontend best practices through our collaboration and was impressed by his technical expertise, attention to detail, and problem-solving approach. He consistently delivered quality work and was always open to sharing knowledge and supporting the team.</p>
+            <p>I would highly recommend Rahul to any organization looking for a frontend developer who is technically strong, dependable, and genuinely committed to delivering high-quality solutions.</p>
+          </blockquote>
+          <figcaption class="rec-author">
+            <span class="rec-avatar" aria-hidden="true">PS</span>
+            <div>
+              <a class="rec-name rec-name-link" href="https://www.linkedin.com/in/pulkit-singh-80a66917a/" target="_blank" rel="noopener" aria-label="Pulkit Singh on LinkedIn">Pulkit Singh <svg><use href="#i-linkedin"/></svg></a>
+              <div class="rec-title">Senior Software Engineer at John Deere</div>
+              <div class="rec-relation">Worked with Rahul on the same team · July 2026</div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="reveal" style="--d:.08s">
+        <figure class="card rec-card">
+          <div class="rec-quote gradient-text" aria-hidden="true">&ldquo;</div>
+          <blockquote class="rec-text short">
+            <p>Rahul is an incredibly talented developer who played a key role in building the tech at YourDOST. He is also a quick learner who started as a frontend developer and ended up being a really strong full stack developer for YourDOST. He is also a great person to be around. Highly recommend.</p>
+          </blockquote>
+          <figcaption class="rec-author">
+            <span class="rec-avatar" aria-hidden="true">HK</span>
+            <div>
+              <a class="rec-name rec-name-link" href="https://www.linkedin.com/in/himanshumanutd/" target="_blank" rel="noopener" aria-label="Himanshu Kumar on LinkedIn">Himanshu Kumar <svg><use href="#i-linkedin"/></svg></a>
+              <div class="rec-title">Building Play at District by Zomato</div>
+              <div class="rec-relation">Worked with Rahul on different teams · July 2026</div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -650,50 +714,42 @@ svg { flex-shrink: 0; }
 (function () {
   /* ---------- Projects ---------- */
   var projects = [
-    { name: "Partner Integration Platform", year: "2026", tag: "Work · Innovation Award", icon: "layers",
-      points: ["Lets partners offer YourDOST services inside their own apps instead of sending users to our website.",
-               "Partners build their own UI on top of the APIs I provide.",
-               "Counselling sessions ship as a packaged widget: partners install it and get the full session flow without writing any session logic."],
-      stack: ["Partner APIs", "Embeddable Widget", "Installable Package"] },
-    { name: "AI Session Summaries", year: "", tag: "Work · AI", icon: "bulb",
-      points: ["Turns recorded online psychologist sessions into text with OpenAI's Whisper speech-to-text model.",
-               "Sends the transcript to an OpenAI model to produce a session summary for the psychologist."],
-      stack: ["OpenAI Whisper", "OpenAI API", "Speech-to-Text", "AI Summarisation"] },
-    { name: "YourDOST Counselling Platform", year: "2022 – Now", tag: "Work · YourDOST", icon: "video",
-      points: ["Cross-platform web and mobile app in Flutter, used by thousands of people every day.",
-               "Audio, video and hybrid counselling sessions on the Agora SDK with low-latency streaming.",
-               "Appointment booking, red-flag user monitoring and enterprise SSO behind secure REST APIs."],
-      stack: ["Flutter", "Agora SDK", "Node.js", "Spring Boot", "AWS", "SSO"],
+    { name: "Partner Integration APIs", year: "2026", tag: "Work · Innovation Award", icon: "layers",
+      points: ["API platform that lets partners offer YourDOST services inside their own apps, behind their own UI.",
+               "Designed the partner-facing APIs, plus a packaged session widget so partners need no session logic of their own.",
+               "Won the Innovation Award at YourDOST."],
+      stack: ["Partner APIs", "REST", "API Design", "Installable Package"] },
+    { name: "AI Session Summary Pipeline", year: "", tag: "Work · AI Backend", icon: "bulb",
+      points: ["Pipeline that converts recorded psychologist sessions into text with OpenAI's Whisper speech-to-text model.",
+               "Passes the transcript to an OpenAI model to generate a session summary for the psychologist."],
+      stack: ["OpenAI Whisper", "OpenAI API", "Speech-to-Text", "LLM Summarisation"] },
+    { name: "Counselling Platform Backend", year: "2022 – Now", tag: "Work · YourDOST", icon: "code",
+      points: ["REST APIs for authentication, appointment booking, red-flag user management and enterprise workflows.",
+               "Microservices in Java and Spring Boot alongside Node.js services, with enterprise SSO.",
+               "Runs on AWS behind NGINX with SSL/TLS, serving thousands of users daily."],
+      stack: ["Node.js", "Spring Boot", "MongoDB", "MySQL", "AWS", "SSO"],
       live: "https://yourdost.com/", liveLabel: "Visit Platform" },
-    { name: "Real-time Chat & Notifications", year: "", tag: "Work · YourDOST", icon: "chat",
+    { name: "Real-time Messaging", year: "", tag: "Work · YourDOST", icon: "chat",
       points: ["Real-time chat between users and counsellors built on Firebase.",
                "Presence tracking, push notifications and secure data handling."],
-      stack: ["Firebase", "Flutter", "Push Notifications", "Node.js"] },
-    { name: "Home Services Booking", year: "2022", tag: "Work · Trydan", icon: "calendar",
-      points: ["The Booking Services page where customers browse and book home services.",
-               "Real-time availability and booking confirmation flows, backed by Node.js and Express APIs."],
-      stack: ["React", "Flutter", "Node.js", "Express"] },
+      stack: ["Firebase", "Real-time", "Push Notifications"] },
+    { name: "Home Services Booking API", year: "2022", tag: "Work · Trydan", icon: "calendar",
+      points: ["Node.js and Express APIs for service management and bookings.",
+               "Real-time availability and booking confirmation flows, surfaced in the web and mobile apps."],
+      stack: ["Node.js", "Express", "REST APIs", "DevOps"] },
     { name: "Personal Finance Tracker", year: "", tag: "Side Project", icon: "wallet",
-      points: ["Track income and spending, with secure JWT-based login.",
-               "React frontend with a Node.js API and MongoDB storage."],
-      stack: ["React", "Node.js", "MongoDB", "JWT"] },
-    { name: "E-commerce Store with Stripe", year: "", tag: "Side Project", icon: "cart",
-      points: ["Online store built with Angular.",
-               "Stripe integration for secure payment processing."],
-      stack: ["Angular", "Stripe"] },
-    { name: "SEO Blog Platform", year: "", tag: "Side Project", icon: "pen",
-      points: ["Blog platform with server-side rendering for speed and SEO.",
-               "Built with Next.js on a MySQL database."],
-      stack: ["Next.js", "MySQL", "SSR", "SEO"] },
-    { name: "Sugar Cosmetics Clone", year: "2023", tag: "Full Stack", icon: "code",
-      points: ["Full stack clone of the Sugar Cosmetics store with products, cart and accounts.",
-               "Next.js 13 and TypeScript frontend with an Express and MongoDB API using JWT and bcrypt."],
-      stack: ["Next.js", "TypeScript", "Express", "MongoDB"],
+      points: ["Node.js API with JWT authentication and MongoDB storage.",
+               "React frontend to track income and spending."],
+      stack: ["Node.js", "MongoDB", "JWT", "React"] },
+    { name: "Sugar Cosmetics Clone", year: "2023", tag: "Full Stack", icon: "cart",
+      points: ["Express and MongoDB API with controllers, routes, middleware and models.",
+               "JWT authentication with bcrypt-hashed passwords, consumed by a Next.js 13 and TypeScript storefront."],
+      stack: ["Express", "MongoDB", "JWT", "bcrypt", "Next.js"],
       git: "https://github.com/Rahul850kr/Sugar_Cosmetics_Clone" },
     { name: "TogglTrack Clone", year: "2022", tag: "Full Stack", icon: "clock",
-      points: ["Clone of the Toggl Track time-tracking app with sign-up, timers and reports.",
-               "React and Redux frontend with a Node.js, Express and MongoDB backend."],
-      stack: ["React", "Redux", "Node.js", "MongoDB"],
+      points: ["Node.js, Express and MongoDB backend for users and time entries, kept in its own repository.",
+               "React and Redux frontend for timers and reports."],
+      stack: ["Node.js", "Express", "MongoDB", "React"],
       live: "https://toggltrack521.netlify.app/", git: "https://github.com/Rahul850kr/TogglTrack" }
   ];
   var grid = document.getElementById("projectsGrid");
